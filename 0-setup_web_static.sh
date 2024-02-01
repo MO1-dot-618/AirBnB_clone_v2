@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #Configuration
 
+#install nginx
+sudo apt-get update
+sudo apt-get install -y nginx
+
 #making directories
 sudo mkdir -p /data/web_static/releases/
 sudo mkdir -p /data/web_static/shared/
