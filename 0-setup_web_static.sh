@@ -9,7 +9,7 @@ sudo apt-get install -y nginx
 sudo mkdir -p /data/web_static/releases/
 sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
-sudo echo "Hello Phoenix!" > /data/web_static/releases/test/index.html
+echo "Hello Phoenix!" | sudo tee /data/web_static/releases/test/index.html >/dev/null
 
 #making symbolic link
 link="/data/web_static/current"
