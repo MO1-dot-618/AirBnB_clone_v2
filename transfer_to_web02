@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Transfers a file from client to server with SSH
+# Four arguments:
+#    The path to the file to be transferred.
+
+if [ $# -lt 1 ]
+then
+  echo "Usage: 0-transfer_file PATH_TO_FILE"
+else
+  scp -o StrictHostKeyChecking=no -i "~/.ssh/school" "$1" "ubuntu@52.3.240.185":~
+fi
