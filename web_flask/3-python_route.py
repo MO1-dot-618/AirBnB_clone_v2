@@ -17,7 +17,7 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def display_c(text):
+def display_c(text=None):
     if not text:
         # If text is empty, return a custom 404 response
         return """
@@ -35,12 +35,12 @@ def display_c(text):
 
 
 @app.route('/python/<text>', strict_slashes=False)
-def display_python(text):
+def display_python(text=None):
     if not text:
         text_with_spaces = "is cool"
     else:
         text_with_spaces = text.replace('_', ' ')
-    return 'C {}'.format(text_with_spaces)
+    return 'python {}'.format(text_with_spaces)
 
 
 if __name__ == '__main__':
