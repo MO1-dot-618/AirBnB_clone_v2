@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+""" flask running"""
+
 from flask import Flask
 
 app = Flask(__name__)
